@@ -31,6 +31,8 @@
             <ul>
                 <li> <a href="{{ route("admin.deposit.view",["active"]) }}"><i class="bx bx-right-arrow-alt"></i>Active Deposits</a>
                 </li>
+                <li> <a href="{{ route("admin.deposit.view",["active-bank"]) }}"><i class="bx bx-right-arrow-alt"></i>Active Bank Deposit</a>
+                </li>
                 <li> <a href="{{ route("admin.deposit.view",["all"]) }}"><i class="bx bx-right-arrow-alt"></i>All Deposits</a>
                 </li>
                 </li>

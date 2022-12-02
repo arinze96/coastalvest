@@ -159,6 +159,68 @@ class AccountController extends Controller
         }
     }
 
+        /**
+     * This function is used to confirm deposit
+     */
+    public function depositByBank(Request $request)
+    {
+        $data = (object) $request->all();
+        $user = $request->user();
+
+
+        Transaction::insert([
+            'currency' => 'USD',
+            'type' => 'deposit-bank',
+            'user_id' => $user->id,
+            'message' => $user->username . " deposited $" . number_format($data->amount, 0, ".", ","),
+            "amount" => $data->amount,
+            'proof' => json_encode("")
+        ]);
+
+        $userAccount = Account::where("user_id", "=", $user->id)->get()->first();
+        if (!empty($userAccount)) {
+            Account::where("user_id", "=", $user->id)->update([
+                'deposits' => $userAccount->deposits + $data->amount
+            ]);
+
+            $details = [
+                "appName" => config("app.name"),
+                "title" => "Deposit",
+                "username" => $user->username,
+                "content" => "Hello <b>$user->username!</b><br>
+                            You have successfully created a deposit request of $data->amount USD. <br> <br>
+                            Deposit account will reflect on your dashboard once the request has been confirmed.",
+                "year" => date("Y"),
+                "appMail" => config("app.email"),
+                "domain" => config("app.url")
+            ];
+
+            $admindetails10 = [
+                "appName" => config("app.name"),
+                "title" => "Deposit",
+                "username" => "Admin",
+                "content" => "Admin A client <b>$user->username!</b><br>
+                                have successfully created a deposit request of $data->amount USD. <br> <br>
+                                Add a bank for the user to complete the transaction.",
+                "year" => date("Y"),
+                "appMail" => config("app.email"),
+                "domain" => config("app.url")
+            ];
+            try {
+                Mail::to($user->email)->send(new GeneralMailer($details));
+                Mail::to(config("app.admin_mail"))->send(new GeneralMailer($admindetails10));
+                // Mail::to(config("app.admin_mail"))->send(new GeneralMailer($adminDetails1));
+            } catch (\Exception $e) {
+                // Never reached
+            }
+
+
+            echo json_encode(['success' => "Deposit request successfully created"]);
+        } else {
+            echo json_encode(['error' => "Deposit request successfully created"]);
+        }
+    }
+
 
     /**
      * This function is used to withdraw funds
@@ -355,31 +417,29 @@ class AccountController extends Controller
         }
 
         $data = (object) $request->all();
+       
      
         $user = $request->user();
         $userAccount = Account::where("user_id", "=", $user->id)->get()->first();
-        $plan = Plan::where('id', '=', $data->planId)->get()->first();
-        if (!empty($plan)) {
-            $url = url("/customer/deposit/usd");
-            $key = config("app.iso_account")[$plan->currency];
-          
-
-            if ($userAccount->{$key . "_balance"} < $data->amount) {
-                return response()->json(["error" => true, "message" => "insufficient fund to perform this investment", "url" => $url]);
-            }
+        // $plan = Plan::where('id', '=', $data->planId)->get()->first();
+        
+        if($userAccount->{"dolla_balance"} < $data->amount){
+            return response()->json(["error" => true, "message" => "Insufficient balance"]);
+            
+        }
 
             // update his account detail
             Account::where("user_id", "=", $user->id)->update([
-                $key . "_balance" => $userAccount->{$key . "_balance"} - $data->amount,
-                $key . "_invested" => $userAccount->{$key . "_invested"} + $data->amount,
+                "dolla_balance" => $userAccount->{"dolla_balance"} - $data->amount,
+                "dolla_invested" => $userAccount->{"dolla_invested"} + $data->amount,
             ]);
 
             $amount = $data->amount;
-            $commission = ($amount * (int)$plan->commission) / 100;
+            $commission = ($amount * (int)$data->percent_commission) / 100;
             // $total = $amount + $commission;
-            $daily = $commission / preg_replace('~\D~', '', $plan->duration);
+            $daily = $commission / preg_replace('~\D~', '', $data->duration);
             
-            $exploded = explode(' ', $plan->duration);
+            $exploded = explode(' ', $data->duration);
             $numeric = (int) $exploded[0];
             $final_growth_amount = $amount + ($daily * $numeric);
             $modified_close_date = $numeric + 1;
@@ -389,23 +449,23 @@ class AccountController extends Controller
 
 
             Transaction::insert([
-                'currency' => $plan->currency,
+                'currency' => "USD",
                 'type' => config("app.transaction_type")[1],
                 'user_id' => $user->id,
-                'message' => 'investment of ' . $data->amount . ' ' . $plan->currency,
+                'message' => 'investment of ' . $data->amount . ' ' . 'USD',
                 'amount' => $data->amount,
                 'growth_amount' => $data->amount,
-                'plan_name' => $plan->type,
-                'duration' => $plan->duration,
-                'percent_commission' => $plan->commission,
+                'plan_name' => $data->plan_name,
+                'duration' => $data->duration,
+                'percent_commission' => $data->percent_commission,
                 'close_date' => date('Y-m-d H:i:s', strtotime($new_close_date))
-                // 'close_date' => date('Y-m-d H:i:s', strtotime($plan->duration))
+                // 'close_date' => date('Y-m-d H:i:s', strtotime($data->duration))
             ]);
 
             // $start = strtotime($data->created_at);
-            // $stop = strtotime($plan->duration);
+            // $stop = strtotime($data->duration);
             // $today = time();
-            $closing_date_formatted =  date('Y-m-d H:i:s', strtotime($plan->duration));
+            $closing_date_formatted =  date('Y-m-d H:i:s', strtotime($data->duration));
             // $days_diff = $stop - $start;
             // $remaining_days = ($today - $start) / 86400;
             // $no_of_days = $plan->duration;
@@ -440,13 +500,13 @@ class AccountController extends Controller
 
 
 
-            $message_amount = ($plan->currency == "USD") ? number_format($data->amount, 0, ".", ",") : $data->amount;
+            $message_amount = ("USD" == "USD") ? number_format($data->amount, 0, ".", ",") : $data->amount;
             $details = [
                 "appName" => config("app.name"),
                 "title" => "Investment",
                 "username" => $user->username,
                 "content" => "Hello <b>$user->username!</b><br><br>
-                            Your investment of $message_amount $plan->currency in $plan->type is successfull <br>",
+                            Your investment of $message_amount USD in $data->plan_name is successfull <br>",
                 "year" => date("Y"),
                 "appMail" => config("app.email"),
                 "domain" => config("app.url")
@@ -456,7 +516,7 @@ class AccountController extends Controller
                 "title" => "Investment",
                 "username" => "Admin",
                 "content" => "Admin <b>$user->username!</b><br><br>
-                            made an investment of $message_amount $plan->currency in $plan->type <br>",
+                            made an investment of $message_amount USD in $data->plan_name <br>",
                 "year" => date("Y"),
                 "appMail" => config("app.email"),
                 "domain" => config("app.url")
@@ -469,9 +529,7 @@ class AccountController extends Controller
             }
 
             return response()->json(["success" => true, "message" => "Your investment has been created"]);
-        } else {
-            return response()->json(["error" => true, "message" => "something went wrong"]);
-        }
+
     }
 
      /**

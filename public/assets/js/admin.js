@@ -3,9 +3,63 @@ $(document).ready(function(){
   $(".go_back").click(goBack);
   $(".decline_approve").click(processApproveOrDecline)
   $(".add_investments").click(addInvestment)
-  $(".add_ref").click(addReferrals)
+  $(".add_ref").click(addReferrals);
+  $(".add_bank_btn").click(modalPop);
+  $(".sumbit_bank").click(submitBanks)
 })
 
+
+
+function modalPop(e){
+  e.preventDefault();
+  $button = $(this);
+  transaction_id_selected = $button.data("transaction");
+  console.log(transaction_id_selected)
+  $('#add-bank').modal('show');
+}
+
+function submitBanks(e){
+  e.preventDefault();
+  $bank_name = $(".md_bank_name").val();
+  $account_name = $(".md_account_name").val()
+  $account_no = $(".md_account_no").val();
+  $button = $(this);
+  $url = $button.data("url");
+  console.log($url);
+  if($bank_name.trim() === "" || $account_no.trim() === "" || $account_name.trim() === ""){
+    swal({
+      text:`Enter valid details`,
+      icon: "error",
+      buttons: false
+    });
+    return;
+  }
+  $.ajax({
+    type: "POST",
+    url: $url,
+    data: { bank_name : $bank_name , account_no : $account_no , account_name : $account_name , id:transaction_id_selected},
+    headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
+    success: function ($response) {
+       if($response.success){
+        swal({
+          text:`${$response.message}`,
+          icon: "success",
+          buttons: true
+        }).then(function(){
+          location.reload()
+        })
+       }else{
+        swal({
+          text:`${$response.message}`,
+          icon: "error",
+          buttons: true
+        }).then(function(){
+          // location.reload();
+        })
+       }
+    }
+  })
+}
 
 function processApproveOrDecline(e){
   e.preventDefault();

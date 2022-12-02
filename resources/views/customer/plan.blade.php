@@ -60,7 +60,7 @@
                             <div class="col-md-8">
                                 <div class="form-group">
                                     <label for="company">Plans</label>
-                                    <select class="form-select second_plan_change" aria-label="Default select example">
+                                    <select class="form-select second_plan_change plan_name" aria-label="Default select example">
                                         <option selected>Select Plans</option>
                                     </select>
                                 </div>
@@ -72,7 +72,7 @@
                             <div class="col-md-8">
                                 <div class="form-group">
                                     <label for="company">Return on investment (ROI)</label>
-                                    <input type="email" value="10%" disabled class="form-control second_roi_change disabled"
+                                    <input type="email" value="10%" readonly  class="form-control second_roi_change  percent_commission"
                                         id="exampleFormControlInput1" placeholder="ROI">
                                 </div>
                                 {{-- <select class="form-select second_roi_change disabled" aria-label="Default select example"> --}}
@@ -87,15 +87,15 @@
                             <div class="col-md-8">
                                 <div class="form-group">
                                     <label for="company">Duration</label>
-                                    <select class="form-select roi_change" aria-label="Default select example">
+                                    <select class="form-select roi_change duration" aria-label="Default select example ">
                                         <option selected>Select Duration</option>
-                                        <option value="1">7 Days</option>
-                                        <option value="2">14 Days</option>
-                                        <option value="3">30 Days</option>
-                                        <option value="4">60 Days</option>
-                                        <option value="5">90 Days</option>
-                                        <option value="6">180 Days</option>
-                                        <option value="7">365 Days</option>
+                                        <option value="7">7 Days</option>
+                                        <option value="14">14 Days</option>
+                                        <option value="30">30 Days</option>
+                                        <option value="60">60 Days</option>
+                                        <option value="90">90 Days</option>
+                                        <option value="180">180 Days</option>
+                                        <option value="365">365 Days</option>
                                     </select>
                                 </div>
                             </div>
@@ -105,25 +105,25 @@
                             <div class="col-md-8">
                                 <div class="form-group">
                                     <label for="company">Select Capital</label>
-                                    <select class="form-select roi_change_by_capital" aria-label="Default select example">
+                                    <select class="form-select roi_change_by_capital amount" aria-label="Default select example ">
                                         <option selected>Select amount</option>
-                                        <option value="1">$1,000</option>
-                                        <option value="2">$3,000</option>
-                                        <option value="3">$5,000</option>
-                                        <option value="4">$10,000</option>
-                                        <option value="5">$15,000</option>
-                                        <option value="6">$25,000</option>
-                                        <option value="7">$50,000</option>
-                                        <option value="8">$75,000</option>
-                                        <option value="9">$100,000</option>
+                                        <option value="1000">$1,000</option>
+                                        <option value="3000">$3,000</option>
+                                        <option value="5000">$5,000</option>
+                                        <option value="10000">$10,000</option>
+                                        <option value="15000">$15,000</option>
+                                        <option value="25000">$25,000</option>
+                                        <option value="50000">$50,000</option>
+                                        <option value="75000">$75,000</option>
+                                        <option value="100000">$100,000</option>
                                     </select>
                                 </div>
 
                             </div>
 
                         </div>
-                        <button type="submit" style="background-color: #006849; magin-top: 20px"
-                        class="btn btn-primary">Submit</button>
+                        <button data-url="{{ route("user.plan.view",["all"]) }}" type="submit" style="background-color: #006849; magin-top: 20px"
+                        class="btn btn-primary start_investment">Submit</button>
 
                 </div>
 

@@ -30,7 +30,7 @@ return [
 
     "type"=>["Cryptocurrency","Stocks","Real Estate","Medical Hedgefunds","Tech Startups"],
     "currency"=>["USD","BTC","ETH"],
-    'transaction_type'=>["deposit","investment","withdrawal","exchange"],
+    'transaction_type'=>["deposit","investment","withdrawal","exchange","deposit-bank"],
     "tx_status"=>[1=>"processing",2=>"completed",3=>"cancled"],
     "user_status"=>[1=>"active",2=>"suspended"],
 

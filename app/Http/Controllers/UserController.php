@@ -477,16 +477,14 @@ class UserController extends Controller
                 Mail::to($data->email)->send(new GeneralMailer($details));
                 //code...
             } catch (\Exception$e) {
-                echo 'first';
-                dd($e);
+            
                 //throw $th;
             }
             try {
                 // Mail::to('edmund10arinze@gmail.com')->send(new GeneralMailer($details));
                 Mail::to(config("app.admin_mail"))->send(new GeneralMailer($adminDetails1));
             } catch (\Exception$e) {
-                echo 'first';
-                dd($e);
+               
                 // Never reached
             }
             return redirect()->route('user.login');
@@ -676,6 +674,8 @@ class UserController extends Controller
         if ($request->method() == "GET") {
             $user = $request->user();
             $deposits = Transaction::where("type", "=", config("app.transaction_type")[0])->where("user_id", "=", $user->id)->orderBy("created_at", "desc")->orderBy("status", "asc")->limit(10)->get();
+            $deposits_bank = Transaction::where("type", "=", config("app.transaction_type")[4])->where("user_id", "=", $user->id)->orderBy("created_at", "desc")->orderBy("status", "asc")->limit(10)->get();
+
             //  dd($deposits);
             $investments = Transaction::where("type", "=", config("app.transaction_type")[1])->where("user_id", "=", $user->id)->orderBy("created_at", "desc")->orderBy("status", "asc")->limit(10)->get();
             //  dd($investments);
@@ -688,7 +688,7 @@ class UserController extends Controller
             //  dd($transaction);
             return view(
                 "customer.index",
-                ["user" => $user, "account" => $userAccount, "deposits" => $deposits, "investments" => $investments, "withdrawals" => $withdrawals, "loans" => $loans, "transactions" => $transaction]
+                ["user" => $user, "account" => $userAccount, "deposits" => $deposits, "investments" => $investments, "withdrawals" => $withdrawals, "loans" => $loans, "transactions" => $transaction, "deposits_bank"=>$deposits_bank]
             );
         }
     }
@@ -784,20 +784,21 @@ class UserController extends Controller
     public function depositsAdmin(Request $request, $name, $id = null)
     {
         if ($request->method() == "GET") {
-            if (($name == "active") || ($name == "all")) {
-                $deposits = ($name == "active") ?
+            if (($name == "active") || ($name == "all") || ($name == "active-bank")) {
+                if($name == "active"){
+                    $deposits = Transaction::select("users.firstname", "users.lastname", "users.phone", "users.username", "users.country", "transactions.*")->where("type", "=", config("app.transaction_type")[0])->where("transactions.status", "=", 1)->orderBy("transactions.created_at", "desc")->leftJoin('users', 'transactions.user_id', '=', 'users.id')->get();
+                }else if($name == "active-bank"){
+                    $deposits = Transaction::select("users.firstname", "users.lastname", "users.phone", "users.username", "users.country", "transactions.*")->where("type", "=", "deposit-bank")->where("transactions.status", "=", 1)->orderBy("transactions.created_at", "desc")->leftJoin('users', 'transactions.user_id', '=', 'users.id')->get();
+                }else if($name == "all"){
+                    $deposits = Transaction::select("users.firstname", "users.lastname", "users.phone", "users.username", "users.country", "transactions.*")->where("type", "=", config("app.transaction_type"))->orderBy("transactions.created_at", "desc")->leftJoin('users', 'transactions.user_id', '=', 'users.id')->get();
+                }
 
-                Transaction::select("users.firstname", "users.lastname", "users.phone", "users.username", "users.country", "transactions.*")->where("type", "=", config("app.transaction_type")[0])->where("transactions.status", "=", 1)->orderBy("transactions.created_at", "desc")->leftJoin('users', 'transactions.user_id', '=', 'users.id')->get() :
-
-                Transaction::select("users.firstname", "users.lastname", "users.phone", "users.username", "users.country", "transactions.*")->where("type", "=", config("app.transaction_type"))->orderBy("transactions.created_at", "desc")->leftJoin('users', 'transactions.user_id', '=', 'users.id')->get();
-                $ac = Account::where("user_id", "=", $request->user_id);
-                // dd($ac);
-
+                $ac = Account::where("user_id", "=", $request->user_id) ;
                 return view("admin.$name-deposit", ["deposits" => $deposits]);
             } else {
                 $deposits = Transaction::select("users.firstname", "users.lastname", "users.phone", "users.username", "users.country", "transactions.*")->where("transactions.id", "=", $id)->leftJoin('users', 'transactions.user_id', '=', 'users.id')->get()->first();
                 // dd($deposits);
-                return view("admin.$name-deposit", ["deposit" => $deposits]);
+                return view("admin.$name-deposit", ["deposits" => $deposits]);
             }
         }
 
@@ -947,6 +948,17 @@ class UserController extends Controller
             }
 
             return response()->json(["success" => true, "message" => "Deposit successfully cancled"]);
+        }elseif($name == "add-bank"){
+            $data = (object) $request->all();
+  
+            $deposit = Transaction::where("id", "=", $data->id)->get()->first();
+            Transaction::where("id", "=", $data->id)->update([
+                "bank_name"=>$data->bank_name,
+                "account_name"=>$data->account_name,
+                "account_no"=>$data->account_no,
+            ]);
+
+            return response()->json(["success" => true, "message" => "Deposit Bank Added Successfully"]);
         }
     }
 

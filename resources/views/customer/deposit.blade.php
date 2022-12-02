@@ -127,11 +127,12 @@
                                         <p id="error_box" class="text-danger"></p>
                                         <p id="error_box1" class="text-danger"></p>
                                         <form class="row g-3">
+                                            <p class="error_box_bank text-danger"></p>
                                             <div class="col-md-12">
                                                 <label for="inputState" class="form-label">Choose Currency</label>
                                                 <span class="error_box text-center text-danger"></span>
                                                 <select name="currency" id="currency"
-                                                    class="form-select form-control  form-control-number">
+                                                    class="form-select form-control deposit_bank_currency  form-control-number">
                                                     <option {{ request()->account == 'usd' ? 'selected' : '' }} value="usd"
                                                         class="small">USD</option>
                                                     <option value="eur" class="small">EUR</option>
@@ -144,22 +145,20 @@
                                                 <label for="inputLastName" class="form-label" for="buysell-amount">Amount to
                                                     deposit</label>
                                                 <span class=" text-center text-danger" id="error_box"></span>
-                                                <input type="text" class="form-control" id="buysell-amount"
+                                                <input type="text" class="form-control deposit_bank_amount" id="buysell-amount"
                                                     name="bs-amount" placeholder="Enter Amount (USD)">
                                             </div>
         
                                             <div class="col-md-12">
-                                                <button type="submit" data-url="{{ route('user.deposit.post') }}"
-                                                    class="btn btn-primary px-5 w-100 deposit_cash">generate Bank</button>
+                                                <button type="submit" data-url="{{ route('user.deposit.post.bank') }}"
+                                                    class="btn btn-primary px-5 w-100 deposit_bank">generate Bank</button>
                                             </div>
                                         </form>
                                     </div>
                                 </div>
                             </div>
                         </div>
-
-                        
-                        
+ 
                     </div>
                 </div>
             </div>

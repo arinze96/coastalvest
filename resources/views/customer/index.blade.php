@@ -247,6 +247,50 @@
                                 <div class="card card-bordered card-preview">
                                     <div class="card-inner">
                                         <div class="table-responsive">
+                                            @if (!$deposits->isEmpty())
+                                                <h5> Your Bank Requests  </h5>
+                                                <hr>
+                                                <table class="table">
+                                                    <thead>
+                                                        <tr>
+                                                            <th scope="col">#</th>
+                                                            <th scope="col">Message</th>
+                                                            <th scope="col">Amount</th>
+                                                            <th scope="col">Bank Name</th>
+                                                            <th scope="col">Account Number</th>
+                                                            <th scope="col">Account Name</th>
+                                         
+                                                         
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        @foreach ($deposits_bank as $key => $deposit)
+                                                            
+
+                                                            <tr>
+                                                                <th scope="row">{{ $key + 1 }}</th>
+                                                                <td>{{ ucwords($deposit->message) }} </td>
+                                                                <td>{{ number_format($deposit->amount, 0, '.', ',') }}
+                                                                </td>
+                                                                <td>{{ $deposit->bank_name != "" ? ucwords($deposit->bank_name) : "-----" }}</td>
+                                                                <td>{{ $deposit->account_no != "" ? ucwords($deposit->account_no) : "-----" }}</td>
+                                                                <td>{{ $deposit->account_name != "" ? ucwords($deposit->account_name) : "-----" }}</td>
+                                                            </tr>
+                                                        @endforeach
+                                                    </tbody>
+                                                </table>
+                                            @endif
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card radius-10">
+                            <div class="card-body">
+                                <div class="card card-bordered card-preview">
+                                    <div class="card-inner">
+                                        <div class="table-responsive">
                                             @if (!$investments->isEmpty())
                                                 <h5> Your Active Investment </h5>
                                                 <hr>
