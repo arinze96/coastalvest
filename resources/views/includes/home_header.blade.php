@@ -1,6 +1,6 @@
 <div class="header-area header-absolute">
     <div class="container">
-        <div class="support-bar-area">
+        {{-- <div class="support-bar-area">
             <div class="row">
                 <div class="col-lg-6 support-contact-info">
                     <span class="address"><i class="flaticon-placeholder"></i>Youngsville, NC 27596, United States</span>
@@ -15,7 +15,7 @@
                     </ul>
                 </div>
             </div>
-        </div>
+        </div> --}}
         <div class="header-navbar">
             <div class="row">
                 <div class="col-lg-2 col-6">

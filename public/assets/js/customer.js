@@ -123,7 +123,25 @@ const roi_list = [['5%'], ['7%'], ['10%'], ['15%'], ['20%'], ['35%'], ['60%']];
 function roiChange(e, $param) {
   e.preventDefault();
   const roi = $('.roi_change option:selected').val();
-  const index = roi - 1;
+  
+  // const index = roi - 1;
+  let index = 1;
+  if(roi == 7){
+    index = 1
+  }else if (roi == 14){
+    index = 2
+  }
+  else if (roi == 30){
+    index = 3
+  }else if (roi == 60){
+    index = 4
+  }else if (roi == 90){
+    index = 5
+  }else if (roi == 180){
+    index = 6
+  }else if (roi == 360){
+    index = 7
+  }
   const data = roi_list[index];
   console.log(data);
   let options = '';
@@ -151,7 +169,30 @@ const roi_list_by_capital = [
 function roiChangeByCapital(e, $param) {
   e.preventDefault();
   const roi = $('.roi_change_by_capital option:selected').val();
-  const index = roi - 1;
+  // const index = roi - 1;
+  let index = 1;
+  if(roi == 7){
+    index = 1
+  }else if (roi == 1000){
+    index = 2
+  }
+  else if (roi == 3000){
+    index = 3
+  }else if (roi == 5000){
+    index = 4
+  }else if (roi == 10000){
+    index = 5
+  }else if (roi == 15000){
+    index = 6
+  }else if (roi == 25000){
+    index = 7
+  }else if (roi == 50000){
+    index = 7
+  }else if (roi == 75000){
+    index = 7
+  }else if (roi == 100000){
+    index = 7
+  }
   const data = roi_list_by_capital[index];
   console.log(data);
   let options = '';
