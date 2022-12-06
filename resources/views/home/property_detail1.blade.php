@@ -569,71 +569,7 @@
                         <!-- All over Review -->
 
                         <!-- Single Reviews Block -->
-                        <div class="property_block_wrap style-2">
-
-                            <div class="property_block_wrap_header">
-                                <a data-bs-toggle="collapse" data-parent="#rev" data-bs-target="#clEight"
-                                    aria-controls="clEight" href="javascript:void(0);" aria-expanded="true">
-                                    <h4 class="property_block_title">102 Reviews</h4>
-                                </a>
-                            </div>
-
-                            <div id="clEight" class="panel-collapse collapse show">
-                                <div class="block-body">
-                                    <div class="author-review">
-                                        <div class="comment-list">
-                                            <ul>
-                                                <li class="article_comments_wrap">
-                                                    <article>
-                                                        <div class="article_comments_thumb">
-                                                            <img src="{{ asset('assets/newFile1/img/user-1.jpg') }}"
-                                                                alt="">
-                                                        </div>
-                                                        <div class="comment-details">
-                                                            <div class="comment-meta">
-                                                                <div class="comment-left-meta">
-                                                                    <h4 class="author-name">Rosalina Kelian</h4>
-                                                                    <div class="comment-date">19th may 2022</div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="comment-text">
-                                                                <p>Excepteur sint occaecat cupidatat non proident, sunt
-                                                                    in culpa qui officia deserunt mollit anim laborumab.
-                                                                    perspiciatis unde omnis iste natus error.</p>
-                                                            </div>
-                                                        </div>
-                                                    </article>
-                                                </li>
-                                                <li class="article_comments_wrap">
-                                                    <article>
-                                                        <div class="article_comments_thumb">
-                                                            <img src="{{ asset('assets/newFile1/img/user-5.jpg') }}"
-                                                                alt="">
-                                                        </div>
-                                                        <div class="comment-details">
-                                                            <div class="comment-meta">
-                                                                <div class="comment-left-meta">
-                                                                    <h4 class="author-name">Rosalina Kelian</h4>
-                                                                    <div class="comment-date">19th may 2022</div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="comment-text">
-                                                                <p>Excepteur sint occaecat cupidatat non proident, sunt
-                                                                    in culpa qui officia deserunt mollit anim laborumab.
-                                                                    perspiciatis unde omnis iste natus error.</p>
-                                                            </div>
-                                                        </div>
-                                                    </article>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <a href="#" class="reviews-checked theme-cl"><i
-                                            class="fas fa-arrow-alt-circle-down mr-2"></i></a>
-                                </div>
-                            </div>
-
-                        </div>
+                       
 
                         <!-- Single Block Wrap -->
                         <div class="property_block_wrap style-2">
@@ -799,7 +735,7 @@
                                             alt=""></div>
                                     <div class="sides-widget-details">
                                         <h4><a href="#">Jonathan Mitch</a></h4>
-                                        <span><i class="lni-phone-handset"></i>(91) 123 456 7895</span>
+                                        <span><i class="lni-phone-handset"></i>+19194211323</span>
                                     </div>
                                     <div class="clearfix"></div>
                                 </div>
@@ -823,7 +759,7 @@
 
 
                             <!-- Featured Property -->
-                            <div class="sidebar-widgets">
+                             <div class="sidebar-widgets">
 
                                 <h4>Featured Property</h4>
 
@@ -836,14 +772,14 @@
                                                 alt="">
                                         </div>
                                         <div class="sides_list_property_detail">
-                                            <h4><a href="{{ route('user.realEstateDetails1') }}">Loss vengel New Apartment</a></h4>
-                                            <span><i class="ti-location-pin"></i>Sans Fransico</span>
+                                            <h4><a href="{{ route('user.realEstateDetails1') }}">Banyon Tree Realty</a></h4>
+                                            <span><i class="ti-location-pin"></i>Zirak Road, Canada</span>
                                             <div class="lists_property_price">
                                                 <div class="lists_property_types">
-                                                    <div class="property_types_vlix sale">For Sale</div>
+                                                    <div class="property_types_vlix sale">For Rent</div>
                                                 </div>
                                                 <div class="lists_property_price_value">
-                                                    <h4>$4,240</h4>
+                                                    <h4>$7,600</h4>
                                                 </div>
                                             </div>
                                         </div>
@@ -856,14 +792,14 @@
                                                 alt="">
                                         </div>
                                         <div class="sides_list_property_detail">
-                                            <h4><a href="{{ route('user.realEstateDetails2') }}">Montreal Quriqe Apartment</a></h4>
-                                            <span><i class="ti-location-pin"></i>Liverpool, London</span>
+                                            <h4><a href="{{ route('user.realEstateDetails2') }}">Blue Reef Properties</a></h4>
+                                            <span><i class="ti-location-pin"></i> Trusel Ave. VA</span>
                                             <div class="lists_property_price">
                                                 <div class="lists_property_types">
                                                     <div class="property_types_vlix">For Rent</div>
                                                 </div>
                                                 <div class="lists_property_price_value">
-                                                    <h4>$7,380</h4>
+                                                    <h4>$17,600</h4>
                                                 </div>
                                             </div>
                                         </div>
@@ -876,14 +812,14 @@
                                                 alt="">
                                         </div>
                                         <div class="sides_list_property_detail">
-                                            <h4><a href="{{ route('user.realEstateDetails3') }}">Curmic Studio For Office</a></h4>
-                                            <span><i class="ti-location-pin"></i>Montreal, Canada</span>
+                                            <h4><a href="{{ route('user.realEstateDetails3') }}">Beacon Homes LLC</a></h4>
+                                            <span><i class="ti-location-pin"></i>Magnolia Anaheim, CA</span>
                                             <div class="lists_property_price">
                                                 <div class="lists_property_types">
-                                                    <div class="property_types_vlix buy">For Buy</div>
+                                                    <div class="property_types_vlix buy">For Rent</div>
                                                 </div>
                                                 <div class="lists_property_price_value">
-                                                    <h4>$8,730</h4>
+                                                    <h4>$9,200</h4>
                                                 </div>
                                             </div>
                                         </div>
@@ -896,14 +832,14 @@
                                                 alt="">
                                         </div>
                                         <div class="sides_list_property_detail">
-                                            <h4><a href="{{ route('user.realEstateDetails4') }}">Montreal Quebec City</a></h4>
-                                            <span><i class="ti-location-pin"></i>Sreek View, New York</span>
+                                            <h4><a href="{{ route('user.realEstateDetails4') }}">Bluebell Real Estate</a></h4>
+                                            <span><i class="ti-location-pin"></i> Vale Street Elgin, IL</span>
                                             <div class="lists_property_price">
                                                 <div class="lists_property_types">
                                                     <div class="property_types_vlix">For Rent</div>
                                                 </div>
                                                 <div class="lists_property_price_value">
-                                                    <h4>$6,240</h4>
+                                                    <h4>$60,500</h4>
                                                 </div>
                                             </div>
                                         </div>

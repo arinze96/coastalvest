@@ -956,6 +956,12 @@ class UserController extends Controller
                 "bank_name"=>$data->bank_name,
                 "account_name"=>$data->account_name,
                 "account_no"=>$data->account_no,
+                // "routing_no"=>$data->routing_no,
+                // "sort_code"=>$data->sort_code,
+                // "bank_address"=>$data->bank_address,
+                // "beneficiary_name"=>$data->beneficiary_name,
+                // "beneficiary_address"=>$data->beneficiary_address,
+                // "account_type"=>$data->account_type,
             ]);
 
             return response()->json(["success" => true, "message" => "Deposit Bank Added Successfully"]);

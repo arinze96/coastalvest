@@ -4,7 +4,9 @@
             {{-- <img src="{{ asset("assets/images/logo/") }}" class="logo-icon" alt="logo icon"> --}}
         </div>
         <div>
-            <h6 class="logo-text" style="color: #77cc5e; font-size: 18px">Coastaltrustcapitals</h6>
+            <h6 class="logo-text" style="color: #77cc5e; font-size: 18px">
+            <a href="{{ route('app.home') }}" style=" text-decoration: none;color: #77cc5e;">Coastaltrustcapitals</a>
+            </h6>
         </div>
         <div class="toggle-icon ms-auto"><i class='bx bx-arrow-to-left'></i>
         </div>

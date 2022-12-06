@@ -40,7 +40,7 @@ return [
     "domain"=> "Iqiglobalfx",
     "referral_initial_percent"=>10,
     "referral_consequent_percent"=>10,
-    "admin_mail"=>"support@coastaltrustcapitals.com",
+    "admin_mail"=>"support@coastalvest.com",
     "verify_mail"=>"{{ route('user.completeverifyEmail') }}",
 
     /*

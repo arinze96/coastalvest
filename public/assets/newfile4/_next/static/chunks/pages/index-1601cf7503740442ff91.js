@@ -1325,7 +1325,7 @@ _N_E = (window.webpackJsonp_N_E = window.webpackJsonp_N_E || []).push([
                         I(
                           "h3",
                           null,
-                          I("a", { href: "tel:+821-456-789" }, "+821-456-789")
+                          I("a", { href: "tel:+19194211323" }, "+19194211323")
                         )
                       ),
                       I(
@@ -1338,8 +1338,8 @@ _N_E = (window.webpackJsonp_N_E = window.webpackJsonp_N_E || []).push([
                           null,
                           I(
                             "a",
-                            { href: "mailto:support@coastaltrustcapitals.com" },
-                            "support@coastaltrustcapitals.com"
+                            { href: "mailto:support@coastalvest.com" },
+                            "support@coastalvest.com"
                           )
                         )
                       )

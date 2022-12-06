@@ -5,7 +5,7 @@
                 <div class="col-lg-5 col-md-12">
                     <div class="footer-logo-wrapper">
                         <a href="{{ route('app.home') }}">
-                            <img src="{{ asset('assets/CT.png') }}" alt="" style="width: 80px; height: 80px; margin-bottom: 50px">
+                            <img src="{{ asset('assets/coastalvest.png') }}" alt="" style="width: 280px; height: 80px; margin-bottom: 50px">
                             {{-- <h3>LOGO</h3> --}}
                         </a>
                     </div>
@@ -13,10 +13,10 @@
                         is not about money, it’s about finding ways to help you achieve your goals through careful
                         and thoughtful planning and execution.</p>
                         <br> <br>
-                                <a href="#"><i style="color: white" class="fab fa-facebook-f"></i></a> &nbsp;&nbsp;
+                                <a href="+https://t.me/+19192211323"><i  style="color: white" class="fa fa-telegram"></i></a> &nbsp;&nbsp;
                                 <a href="#"><i style="color: white" class="fab fa-twitter"></i></a> &nbsp;&nbsp;
                                 <a href="#"><i style="color: white" class="fab fa-linkedin-in"></i></a> &nbsp;&nbsp;
-                                <a href="#"><i style="color: white" class="fab fa-google-plus-g"></i></a> &nbsp;&nbsp;
+                                <a href="#"><i style="color: white" class="fa fa-envelope" aria-hidden="true"></i></a> &nbsp;&nbsp;
                                 <p style="margin-bottom: 30px"></p>
                 </div>
                 <div class="col-lg-2 col-md-3">
@@ -36,7 +36,7 @@
                     <ul class="footer-links">
                         <li><a href="{{ route('user.realEstate') }}">Real Estate</a></li>
                         <li><a href="{{ route('user.cryptoMarket') }}">Crypto Market</a></li>
-                        <li><a href="#">Stocks Investment</a></li>
+                        <li><a href="{{ route('user.stocks') }}">Stocks Investment</a></li>
                         <li><a href="{{ route('user.medHedgeFunds') }}">Medical HedgeFunds </a></li>
                         <li><a href="{{ route('user.techStartup') }}">Tech Startups </a></li>
                     </ul>
@@ -48,7 +48,7 @@
                             <li><i class="fa fa-home"></i><span>Youngsville, NC 27596 United States</span>
                             </li>
                             <li><i class="fa fa-phone"></i><span>+19194211323</span></li>
-                            <li><i class="far fa-envelope"></i><span>support@coastaltrustcapital.com</span></li>
+                            <li><i class="far fa-envelope"></i><span>support@coastalvest.com</span></li>
                         </ul>
                     </div>
                 </div>

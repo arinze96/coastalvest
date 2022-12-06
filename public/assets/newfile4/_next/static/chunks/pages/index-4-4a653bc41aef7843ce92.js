@@ -2389,7 +2389,7 @@ _N_E = (window.webpackJsonp_N_E = window.webpackJsonp_N_E || []).push([
                     null,
                     t(
                       "a",
-                      { href: "tel:+822456974" },
+                      { href: "tel:+19194211323" },
                       t("i", { className: "bx bx-phone-call" }),
                       "Call Us: +821-456-241"
                     )
@@ -2642,10 +2642,10 @@ _N_E = (window.webpackJsonp_N_E = window.webpackJsonp_N_E || []).push([
                         { className: "pl-0" },
                         o(
                           "a",
-                          { href: "tel:+822456974" },
+                          { href: "tel:+19194211323" },
                           o("i", { className: "bx bx-phone-call" }),
                           o("span", null, "Hotline:"),
-                          "Phone: +822456974"
+                          "Phone: +19194211323"
                         )
                       ),
                       o(
@@ -2653,10 +2653,10 @@ _N_E = (window.webpackJsonp_N_E = window.webpackJsonp_N_E || []).push([
                         { className: "pl-0" },
                         o(
                           "a",
-                          { href: "mailto:hello@corf.com" },
+                          { href: "mailto:support@coastalvest.com" },
                           o("i", { className: "bx bx-envelope" }),
                           o("span", null, "Email:"),
-                          "hello@corf.com"
+                          "support@coastalvest.com"
                         )
                       ),
                       o(

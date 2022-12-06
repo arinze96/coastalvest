@@ -1115,16 +1115,16 @@
                     "li",
                     null,
                     i("i", { className: "bx bx-time" }),
-                    "Mon-Fri 9am-5pm"
+                    "24 hours/7"
                   ),
                   i(
                     "li",
                     null,
                     i(
                       "a",
-                      { href: "tel:+822456974" },
+                      { href: "tel:+19194211323" },
                       i("i", { className: "bx bx-phone-call" }),
-                      "Call Us: +821-456-241"
+                      "Call Us: +19194211323"
                     )
                   ),
                   i(
@@ -1134,7 +1134,7 @@
                       "a",
                       { href: "mailto:hello@info.com" },
                       i("i", { className: "bx bxs-paper-plane" }),
-                      "Email: support@coastaltrustcapitals.com"
+                      "Email: support@coastalvest.com"
                     )
                   )
                 )
@@ -1151,15 +1151,6 @@
                     i(
                       "a",
                       { href: "#", target: "_blank" },
-                      i("i", { className: "bx bxl-facebook" })
-                    )
-                  ),
-                  i(
-                    "li",
-                    null,
-                    i(
-                      "a",
-                      { href: "#", target: "_blank" },
                       i("i", { className: "bx bxl-twitter" })
                     )
                   ),
@@ -1169,16 +1160,7 @@
                     i(
                       "a",
                       { href: "#", target: "_blank" },
-                      i("i", { className: "bx bxl-pinterest-alt" })
-                    )
-                  ),
-                  i(
-                    "li",
-                    null,
-                    i(
-                      "a",
-                      { href: "#", target: "_blank" },
-                      i("i", { className: "bx bxl-instagram" })
+                      i("i", { className: "bx bxl-linkedin" })
                     )
                   )
                 )
@@ -1575,10 +1557,10 @@
                         { className: "pl-0" },
                         c(
                           "a",
-                          { href: "tel:+822456974" },
+                          { href: "tel:+19194211323" },
                           c("i", { className: "bx bx-phone-call" }),
                           c("span", null, "Hotline:"),
-                          "Phone: +822456974"
+                          "Phone: +19194211323"
                         )
                       ),
                       c(
@@ -1586,10 +1568,10 @@
                         { className: "pl-0" },
                         c(
                           "a",
-                          { href: "mailto:hello@corf.com" },
+                          { href: "mailto:support@coastalvest.com" },
                           c("i", { className: "bx bx-envelope" }),
                           c("span", null, "Email:"),
-                          "hello@corf.com"
+                          "support@coastalvest.com"
                         )
                       ),
                       c(
@@ -1597,7 +1579,7 @@
                         null,
                         c("i", { className: "bx bx-location-plus" }),
                         c("span", null, "Address:"),
-                        "123, Western Road, Melbourne Australia1"
+                        "Youngsville, NC 27596 United States"
                       )
                     )
                   )

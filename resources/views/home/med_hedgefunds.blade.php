@@ -378,7 +378,7 @@
                                 viverra maecenas accumsan lacus vel facilisis.</p>
                             <ul>
                                 <li class="active"><i class="bx bx-phone-call"></i><span>Call Now</span>
-                                    <h3><a href="tel:+821-456-789">+821-456-789</a></h3>
+                                    <h3><a href="tel:+19194211323">+19194211323</a></h3>
                                 </li>
                                 <li><i class="bx bx-envelope"></i><span>Mail Us</span>
                                     <h3><a href="cdn-cgi/l/email-protection.html#9cf4f9f0f0f3dcf5f2faf3b2fff3f1"><span
@@ -521,8 +521,8 @@
                         <div class="single-widget contact">
                             <h3>Get In Touch</h3>
                             <ul>
-                                <li class="pl-0"><a href="tel:+822456974"><i
-                                            class="bx bx-phone-call"></i><span>Hotline:</span>Phone: +822456974</a>
+                                <li class="pl-0"><a href="tel:+19194211323"><i
+                                            class="bx bx-phone-call"></i><span>Hotline:</span>Phone: +19194211323</a>
                                 </li>
                                 <li class="pl-0"><a
                                         href="cdn-cgi/l/email-protection.html#7d15181111123d1e120f1b531e1210"><i

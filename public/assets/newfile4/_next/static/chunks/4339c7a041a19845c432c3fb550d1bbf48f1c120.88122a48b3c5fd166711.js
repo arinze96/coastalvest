@@ -171,7 +171,7 @@
                           "a",
                           { onClick: o, className: "navbar-brand" },
                           r("img", {
-                            src: "assets/newfile3/img/logo.png",
+                            src: "newfile3/img/logo.png",
                             alt: "logo",
                           })
                         )
@@ -268,7 +268,7 @@
                                 r(
                                   t.a,
                                   {
-                                    href: "/blog-left-sidebar",
+                                    href: "/stocks",
                                     activeClassName: "active",
                                   },
                                   r(
@@ -613,16 +613,16 @@
                     "li",
                     null,
                     s("i", { className: "bx bx-time" }),
-                    "Mon-Fri 9am-5pm"
+                    "24 hours/7"
                   ),
                   s(
                     "li",
                     null,
                     s(
                       "a",
-                      { href: "tel:+822456974" },
+                      { href: "tel:+19194211323" },
                       s("i", { className: "bx bx-phone-call" }),
-                      "Call Us: +821-456-241"
+                      "Call Us: +19194211323"
                     )
                   ),
                   s(
@@ -630,9 +630,9 @@
                     null,
                     s(
                       "a",
-                      { href: "mailto:support@coastaltrustcapitals.com" },
+                      { href: "mailto:support@coastalvest.com" },
                       s("i", { className: "bx bxs-paper-plane" }),
-                      "Email: support@coastaltrustcapitals.com"
+                      "Email: support@coastalvest.com"
                     )
                   )
                 )
@@ -649,7 +649,7 @@
                     s(
                       "a",
                       { href: "#", target: "_blank" },
-                      s("i", { className: "bx bxl-facebook" })
+                      s("i", { className: "bx bxl-linkedin" })
                     )
                   ),
                   s(
@@ -661,24 +661,6 @@
                       s("i", { className: "bx bxl-twitter" })
                     )
                   ),
-                  s(
-                    "li",
-                    null,
-                    s(
-                      "a",
-                      { href: "#", target: "_blank" },
-                      s("i", { className: "bx bxl-pinterest-alt" })
-                    )
-                  ),
-                  s(
-                    "li",
-                    null,
-                    s(
-                      "a",
-                      { href: "#", target: "_blank" },
-                      s("i", { className: "bx bxl-instagram" })
-                    )
-                  )
                 )
               )
             )
@@ -714,15 +696,6 @@
                     "div",
                     { className: "single-widget" },
                     c(
-                      t.a,
-                      { href: "/" },
-                      c(
-                        "a",
-                        null,
-                        c("img", { src: "/img/logo.png", alt: "Image" })
-                      )
-                    ),
-                    c(
                       "p",
                       null,
                       "We invest in Emerging Growth Healthcare companies where we believe the flexible application of Coastal trust Capital’s frameworks can amplify the potential and pace of growth. We actively engage with tech-enabled health services businesses to leverage and scale their technology and maximize the value of their data assets"
@@ -733,15 +706,6 @@
                       c(
                         "ul",
                         null,
-                        c(
-                          "li",
-                          null,
-                          c(
-                            "a",
-                            { href: "#", target: "_blank" },
-                            c("i", { className: "bx bxl-facebook" })
-                          )
-                        ),
                         c(
                           "li",
                           null,
@@ -760,24 +724,6 @@
                             c("i", { className: "bx bxl-linkedin" })
                           )
                         ),
-                        c(
-                          "li",
-                          null,
-                          c(
-                            "a",
-                            { href: "#", target: "_blank" },
-                            c("i", { className: "bx bxl-youtube" })
-                          )
-                        ),
-                        c(
-                          "li",
-                          null,
-                          c(
-                            "a",
-                            { href: "#", target: "_blank" },
-                            c("i", { className: "bx bxl-instagram" })
-                          )
-                        )
                       )
                     )
                   )
@@ -788,21 +734,21 @@
                   c(
                     "div",
                     { className: "single-widget" },
-                    c("h3", null, "Departments"),
+                    c("h3", null, ""),
                     c(
                       "ul",
                       null,
                       c(
                         "li",
                         null,
-                        c("a", { href: "#" }, "Categories")
+                        c("a", { href: "/about" }, "")
                       ),
-                      c("li", null, c("a", { href: "/about" }, "About")),
-                      c("li", null, c("a", { href: "/contact" }, "Contact us")),
-                      c("li", null, c("a", { href: "/faq" }, "FAQs")),
-                      c("li", null, c("a", { href: "/terms" }, "Terms of Use")),
-                      c("li", null, c("a", { href: "/login" }, "Login")),
-                      c("li", null, c("a", { href: "/register" }, "Register"))
+                      c("li", null, c("a", { href: "/about" }, "")),
+                      c("li", null, c("a", { href: "/contact" }, "")),
+                      c("li", null, c("a", { href: "/faq" }, "")),
+                      c("li", null, c("a", { href: "/terms" }, "")),
+                      c("li", null, c("a", { href: "/login" }, "")),
+                      c("li", null, c("a", { href: "/register" }, ""))
                     )
                   )
                 ),
@@ -843,10 +789,10 @@
                         { className: "pl-0" },
                         c(
                           "a",
-                          { href: "tel:+822456974" },
+                          { href: "tel:+19194211323" },
                           c("i", { className: "bx bx-phone-call" }),
                           c("span", null, "Hotline:"),
-                          "Phone: +822456974"
+                          "Phone: +19194211323"
                         )
                       ),
                       c(
@@ -854,10 +800,10 @@
                         { className: "pl-0" },
                         c(
                           "a",
-                          { href: "mailto:hello@corf.com" },
+                          { href: "mailto:support@coastalvest.com" },
                           c("i", { className: "bx bx-envelope" }),
                           c("span", null, "Email:"),
-                          "hello@corf.com"
+                          "support@coastalvest.com"
                         )
                       ),
                       c(
@@ -865,7 +811,7 @@
                         null,
                         c("i", { className: "bx bx-location-plus" }),
                         c("span", null, "Address:"),
-                        "123, Western Road, Melbourne Australia1"
+                        "Youngsville, NC 27596 United States"
                       )
                     )
                   )

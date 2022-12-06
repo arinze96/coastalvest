@@ -569,71 +569,7 @@
                         <!-- All over Review -->
 
                         <!-- Single Reviews Block -->
-                        <div class="property_block_wrap style-2">
-
-                            <div class="property_block_wrap_header">
-                                <a data-bs-toggle="collapse" data-parent="#rev" data-bs-target="#clEight"
-                                    aria-controls="clEight" href="javascript:void(0);" aria-expanded="true">
-                                    <h4 class="property_block_title">102 Reviews</h4>
-                                </a>
-                            </div>
-
-                            <div id="clEight" class="panel-collapse collapse show">
-                                <div class="block-body">
-                                    <div class="author-review">
-                                        <div class="comment-list">
-                                            <ul>
-                                                <li class="article_comments_wrap">
-                                                    <article>
-                                                        <div class="article_comments_thumb">
-                                                            <img src="{{ asset('assets/newFile1/img/user-1.jpg') }}"
-                                                                alt="">
-                                                        </div>
-                                                        <div class="comment-details">
-                                                            <div class="comment-meta">
-                                                                <div class="comment-left-meta">
-                                                                    <h4 class="author-name">Rosalina Kelian</h4>
-                                                                    <div class="comment-date">19th may 2022</div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="comment-text">
-                                                                <p>Excepteur sint occaecat cupidatat non proident, sunt
-                                                                    in culpa qui officia deserunt mollit anim laborumab.
-                                                                    perspiciatis unde omnis iste natus error.</p>
-                                                            </div>
-                                                        </div>
-                                                    </article>
-                                                </li>
-                                                <li class="article_comments_wrap">
-                                                    <article>
-                                                        <div class="article_comments_thumb">
-                                                            <img src="{{ asset('assets/newFile1/img/user-5.jpg') }}"
-                                                                alt="">
-                                                        </div>
-                                                        <div class="comment-details">
-                                                            <div class="comment-meta">
-                                                                <div class="comment-left-meta">
-                                                                    <h4 class="author-name">Rosalina Kelian</h4>
-                                                                    <div class="comment-date">19th may 2022</div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="comment-text">
-                                                                <p>Excepteur sint occaecat cupidatat non proident, sunt
-                                                                    in culpa qui officia deserunt mollit anim laborumab.
-                                                                    perspiciatis unde omnis iste natus error.</p>
-                                                            </div>
-                                                        </div>
-                                                    </article>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <a href="#" class="reviews-checked theme-cl"><i
-                                            class="fas fa-arrow-alt-circle-down mr-2"></i></a>
-                                </div>
-                            </div>
-
-                        </div>
+                       
 
                         <!-- Single Block Wrap -->
                         <div class="property_block_wrap style-2">
@@ -799,7 +735,7 @@
                                             alt=""></div>
                                     <div class="sides-widget-details">
                                         <h4><a href="#">Jonathan Mitch</a></h4>
-                                        <span><i class="lni-phone-handset"></i>(91) 123 456 7895</span>
+                                        <span><i class="lni-phone-handset"></i>+19194211323</span>
                                     </div>
                                     <div class="clearfix"></div>
                                 </div>

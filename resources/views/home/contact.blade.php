@@ -84,19 +84,19 @@
                            <div class="icon-wrapper">
                               <i class="fa fa-home"></i>
                            </div>
-                           <p>143 castle road 517 district, kiyev port south Canada</p>
+                           <p>Youngsville, NC 27596 United States</p>
                         </div>
                         <div class="single-contact-info">
                            <div class="icon-wrapper">
                               <i class="fa fa-phone"></i>
                            </div>
-                           <p>+3 123 456 789</p>
+                           <p>+19194211323</p>
                         </div>
                         <div class="single-contact-info">
                            <div class="icon-wrapper">
                               <i class="fa fa-envelope"></i>
                            </div>
-                           <p>suport@yourmail.com</p>
+                           <p>support@coastalvest.com</p>
                         </div>
                      </div>
                   </div>
@@ -135,35 +135,35 @@
                      <div class="single-partner-item">
                         <div class="outer-container">
                            <div class="inner-container">
-                              <img src="{{ asset('assets/newfile2/img/partners/partner-1.png') }}" alt="">
+                              <img src="{{ asset('assets/newfile2/img/partners/br.jpg') }}" alt="">
                            </div>
                         </div>
                      </div>
                      <div class="single-partner-item">
                         <div class="outer-container">
                            <div class="inner-container">
-                              <img src="{{ asset('assets/newfile2/img/partners/partner-2.png') }}" alt="">
+                              <img src="{{ asset('assets/newfile2/img/partners/accorns.png') }}" alt="">
                            </div>
                         </div>
                      </div>
                      <div class="single-partner-item">
                         <div class="outer-container">
                            <div class="inner-container">
-                              <img src="{{ asset('assets/newfile2/img/partners/partner-3.png') }}" alt="">
+                              <img src="{{ asset('assets/newfile2/img/partners/bridgewaters.png') }}" alt="">
                            </div>
                         </div>
                      </div>
                      <div class="single-partner-item">
                         <div class="outer-container">
                            <div class="inner-container">
-                              <img src="{{ asset('assets/newfile2/img/partners/partner-4.png') }}" alt="">
+                              <img src="{{ asset('assets/newfile2/img/partners/JP-Morgan-Chase-Emblem.png') }}" alt="">
                            </div>
                         </div>
                      </div>
                      <div class="single-partner-item">
                         <div class="outer-container">
                            <div class="inner-container">
-                              <img src="{{ asset('assets/newfile2/img/partners/partner-5.png') }}" alt="">
+                              <img src="{{ asset('assets/newfile2/img/partners/Zillow-Logo.png') }}" alt="">
                            </div>
                         </div>
                      </div>
