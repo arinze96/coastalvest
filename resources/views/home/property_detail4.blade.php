@@ -243,28 +243,28 @@
             <div class="featured_slick_gallery-slide">
                 <div class="featured_slick_padd"><a href="{{ asset('assets/newFile1/img/0mg43.webp') }}"
                         class="mfp-gallery"><img src="{{ asset('assets/newFile1/img/0mg43.webp') }}"
-                            class="img-fluid mx-auto" alt="" /></a>
+                            class="img-fluid mx-auto" alt="" style="width: 100%" /></a>
                 </div>
                 <div class="featured_slick_padd"><a href="{{ asset('assets/newFile1/img/0mg35.webp') }}"
                         class="mfp-gallery"><img src="{{ asset('assets/newFile1/img/0mg35.webp') }}"
-                            class="img-fluid mx-auto" alt="" /></a>
+                            class="img-fluid mx-auto" alt="" style="width: 100%" /></a>
                 </div>
 
                 <div class="featured_slick_padd"><a href="{{ asset('assets/newFile1/img/0mg40.webp') }}"
                         class="mfp-gallery"><img src="{{ asset('assets/newFile1/img/0mg40.webp') }}"
-                            class="img-fluid mx-auto" alt="" /></a>
+                            class="img-fluid mx-auto" alt="" style="width: 100%" /></a>
                 </div>
                 <div class="featured_slick_padd"><a href="{{ asset('assets/newFile1/img/0mg41.webp') }}"
                         class="mfp-gallery"><img src="{{ asset('assets/newFile1/img/0mg41.webp') }}"
-                            class="img-fluid mx-auto" alt="" /></a>
+                            class="img-fluid mx-auto" alt="" style="width: 100%" /></a>
                 </div>
                 <div class="featured_slick_padd"><a href="{{ asset('assets/newFile1/img/0mg38.webp') }}"
                         class="mfp-gallery"><img src="{{ asset('assets/newFile1/img/0mg38.webp') }}"
-                            class="img-fluid mx-auto" alt="" /></a>
+                            class="img-fluid mx-auto" alt="" style="width: 100%" /></a>
                 </div>
-                <div class="featured_slick_padd"><a href="{{ asset('assets/newFile1/img/0mg39.webp') }}"
-                        class="mfp-gallery"><img src="{{ asset('assets/newFile1/img/0mg39.webp') }}"
-                            class="img-fluid mx-auto" alt="" /></a>
+                <div class="featured_slick_padd"><a href="{{ asset('assets/newFile1/img/0mg33.webp') }}"
+                        class="mfp-gallery"><img src="{{ asset('assets/newFile1/img/0mg33.webp') }}"
+                            class="img-fluid mx-auto" alt="" style="width: 100%" /></a>
                 </div>
             </div>
             

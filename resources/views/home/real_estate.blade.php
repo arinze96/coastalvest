@@ -307,7 +307,7 @@
                                 <div class="list-img-slide">
                                     <div class="click">
                                         <div><a href="{{ route('user.realEstateDetails3') }}"><img
-                                                    src="{{ asset('assets/newFile1/img/0mg26.webp') }}"
+                                                    src="{{ asset('assets/newFile1/img/0mg28.webp') }}"
                                                     class="img-fluid mx-auto" alt="" /></a></div>
                                     </div>
                                 </div>
@@ -370,7 +370,7 @@
                                 <div class="list-img-slide">
                                     <div class="click">
                                         <div><a href="{{ route('user.realEstateDetails4') }}"><img
-                                                    src="{{ asset('assets/newFile1/img/0mg34.webp') }}"
+                                                    src="{{ asset('assets/newFile1/img/0mg43.webp') }}"
                                                     class="img-fluid mx-auto" alt="" /></a></div>
                                     </div>
                                 </div>
@@ -433,7 +433,7 @@
                                 <div class="list-img-slide">
                                     <div class="click">
                                         <div><a href="{{ route('user.realEstateDetails5') }}"><img
-                                                    src="{{ asset('assets/newFile1/img/0mg45.webp') }}"
+                                                    src="{{ asset('assets/newFile1/img/0mg46.webp') }}"
                                                     class="img-fluid mx-auto" alt="" /></a></div>
                                     </div>
                                 </div>
