@@ -40,7 +40,7 @@
 				<!--end breadcrumb-->
 				<div class="row">
 					<div class="col-xl-6 mx-auto">
-						<h6 class="mb-0 text-uppercase" style="text-align: center ">{{ strtoupper(config("app.name")) }} Application Dashboard</h6>
+						<h6 class="mb-0 text-uppercase" style="text-align: center; font-size: 18px ">{{ strtoupper(config("app.name")) }} Application Dashboard</h6>
 						<hr/>
 						<div class="card border-top border-0 border-4 border-info">
 							<div class="card-body">
