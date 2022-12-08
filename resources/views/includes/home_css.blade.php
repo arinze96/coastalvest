@@ -4,7 +4,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <!-- favicon -->
-<link rel="shortcut icon" href="{{ asset('assets/newfile2/img/favicon.png') }}" type="image/x-icon">
+<link rel="shortcut icon" href="{{ asset('assets/CT.png') }}" type="image/png">
 <!-- bootstrap css -->
 <link rel="stylesheet" href="{{ asset('assets/newfile2/css/bootstrap.min.css') }}">
 <!-- fontawesome css -->

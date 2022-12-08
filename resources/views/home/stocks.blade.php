@@ -630,11 +630,11 @@
 
 
     <!-- preloader section start -->
-    <div class="loader-container">
+    {{-- <div class="loader-container">
         <span class="loader">
             <span class="loader-inner"></span>
         </span>
-    </div>
+    </div> --}}
     @include('includes.home_script')
 
 </body>

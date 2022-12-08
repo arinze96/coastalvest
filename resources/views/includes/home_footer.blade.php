@@ -5,7 +5,7 @@
                 <div class="col-lg-5 col-md-12">
                     <div class="footer-logo-wrapper">
                         <a href="{{ route('app.home') }}">
-                            <img src="{{ asset('assets/coastalvest.png') }}" alt="" style="width: 280px; height: 80px; margin-bottom: 50px">
+                            <img src="{{ asset('assets/ct1.png') }}" alt="" style="width: 300px; height: 80px; margin-bottom: 50px">
                             {{-- <h3>LOGO</h3> --}}
                         </a>
                     </div>

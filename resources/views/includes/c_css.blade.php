@@ -3,7 +3,7 @@
 <meta name="csrf-token" content="{{ csrf_token() }}" />
 <!--favicon-->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-<link rel="shortcut icon" href="{{ asset('assets/images/up.png') }}" type="image/png">
+<link rel="shortcut icon" href="{{ asset('assets/CT.png') }}" type="image/png">
 <!--plugins-->
 <link href="{{ asset('assets/plugins/vectormap/jquery-jvectormap-2.0.2.css') }}" rel="stylesheet" />
 <link href="{{ asset('assets/plugins/simplebar/css/simplebar.css') }}" rel="stylesheet" />

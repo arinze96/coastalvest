@@ -10,18 +10,196 @@
     <!-- Custom Color Option -->
     <link href="{{ asset('assets/newFile1/css/colors.css') }}" rel="stylesheet">
     @include('includes.home_css')
+    <style>
+        nav {
+            margin: 0;
+            padding: 0;
+            background-color: #254441;
+        }
+
+        #logo {
+            display: block;
+            padding: 0 30px;
+            float: left;
+            font-size: 20px;
+            line-height: 60px;
+        }
+
+        nav:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        nav ul {
+            float: right;
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            position: relative;
+        }
+
+        nav ul li {
+            margin: 0px;
+            display: inline-block;
+            float: left;
+            background-color: #254441;
+        }
+
+        nav a {
+            display: block;
+            padding: 0 20px;
+            color: #FFF;
+            font-size: 20px;
+            line-height: 60px;
+            text-decoration: none;
+        }
+
+        nav ul li ul li:hover {
+            background: #000000;
+        }
+
+        nav a:hover {
+            background-color: #000000;
+        }
+
+        nav ul ul {
+            display: none;
+            position: absolute;
+            top: 60px;
+        }
+
+        nav ul li:hover>ul {
+            display: inherit;
+        }
+
+        nav ul ul li {
+            width: 170px;
+            float: none;
+            display: list-item;
+            position: relative;
+        }
+
+        nav ul ul ul li {
+            position: relative;
+            top: -60px;
+            left: 170px;
+        }
+
+        li>a:after {
+            content: ' +';
+        }
+
+        .toggle,
+        [id^=drop] {
+            display: none;
+        }
+
+        li>a:only-child:after {
+            content: '';
+        }
+
+        /*Responsive Styles*/
+        @media all and (max-width : 768px) {
+            #logo {
+                display: block;
+                padding: 0;
+                width: 100%;
+                text-align: center;
+                float: none;
+            }
+
+            nav {
+                margin: 0;
+            }
+
+            .toggle+a,
+            .menu {
+                display: none;
+            }
+
+            .toggle {
+                display: block;
+                background-color: #254441;
+                padding: 0 20px;
+                color: #FFF;
+                font-size: 20px;
+                line-height: 60px;
+                text-decoration: none;
+                border: none;
+            }
+
+            .toggle:hover {
+                background-color: #000000;
+            }
+
+            [id^=drop]:checked+ul {
+                display: block;
+            }
+
+            nav ul li {
+                display: block;
+                width: 100%;
+            }
+
+            nav ul ul .toggle,
+
+            nav ul ul a {
+                padding: 0 40px;
+            }
+
+            nav ul ul ul a {
+                padding: 0 80px;
+            }
+
+            nav a:hover,
+
+            nav ul ul ul a {
+                background-color: #000000;
+            }
+
+            nav ul li ul li .toggle,
+
+            nav ul ul a {
+                background-color: #212121;
+            }
+
+            nav ul ul {
+                float: none;
+                position: static;
+                color: #ffffff;
+            }
+
+            nav ul ul li:hover>ul,
+
+            nav ul li:hover>ul {
+                display: none;
+            }
+
+            nav ul ul li {
+                display: block;
+                width: 100%;
+            }
+
+            nav ul ul ul li {
+                position: static;
+            }
+        }
+
+        @media all and (max-width : 330px) {
+            nav ul li {
+                display: block;
+                width: 94%;
+            }
+        }
+    </style>
 </head>
 
 <body class="blue-skin">
-    
+
     <div id="main-wrapper">
-        @include('includes.home_header')
-
-        <!-- End Navigation -->
+        @include('includes.home_heady')
         <div class="clearfix"></div>
-        <!-- Top header  -->
-
-
         <div class="image-cover hero-banner" style="background:#eff6ff url(assets/newFile1/img/pp0.png) no-repeat;">
             <div class="container">
                 <div class="row justify-content-center">
@@ -100,11 +278,16 @@
             <div class="container">
 
                 <div class="row justify-content-center">
-                    <div class="col-lg-7 col-md-10 text-center"  style="background-color: #ccffcc; margin-top: 50px; margin-bottom: 50px" >
+                    <div class="col-lg-7 col-md-10 text-center"
+                        style="background-color: #ccffcc; margin-top: 50px; margin-bottom: 50px">
                         <div style="margin-top: 30px" class="sec-heading">
                             <h2>Explore Good places</h2>
-                            <p style="margin-top: 30px">We specifically invest and look out on deals  for any property that is used exclusively for business and residential purposes, such as apartment complexes, gas stations, grocery stores, hospitals, hotels, offices, parking facilities, restaurants, shopping centers, stores, and theaters. 
-                                And then we buy into them and grow investment gains by capitalising on the rents and leases while properly maintaining and keeping it functional and modern.</p>
+                            <p style="margin-top: 30px">We specifically invest and look out on deals for any property
+                                that is used exclusively for business and residential purposes, such as apartment
+                                complexes, gas stations, grocery stores, hospitals, hotels, offices, parking facilities,
+                                restaurants, shopping centers, stores, and theaters.
+                                And then we buy into them and grow investment gains by capitalising on the rents and
+                                leases while properly maintaining and keeping it functional and modern.</p>
                         </div>
                     </div>
                 </div>
@@ -165,7 +348,7 @@
                                             width="18" alt="" />210 Zirak Road, Canada</div>
                                 </div>
                                 <div class="footer-flex">
-                                    <a href="property-detail.html" class="prt-view">Invest</a>
+                                    <a href="{{ route('user.register') }}" class="prt-view">Invest</a>
                                 </div>
                             </div>
 
@@ -228,7 +411,7 @@
                                         VA</div>
                                 </div>
                                 <div class="footer-flex">
-                                    <a href="property-detail.html" class="prt-view">Invest</a>
+                                    <a href="{{ route('user.register') }}" class="prt-view">Invest</a>
                                 </div>
                             </div>
 
@@ -291,7 +474,7 @@
                                         Anaheim, CA</div>
                                 </div>
                                 <div class="footer-flex">
-                                    <a href="property-detail.html" class="prt-view">Invest</a>
+                                    <a href="{{ route('user.register') }}" class="prt-view">Invest</a>
                                 </div>
                             </div>
 
@@ -354,7 +537,7 @@
                                         Elgin, IL</div>
                                 </div>
                                 <div class="footer-flex">
-                                    <a href="property-detail.html" class="prt-view">Invest</a>
+                                    <a href="{{ route('user.register') }}" class="prt-view">Invest</a>
                                 </div>
                             </div>
 
@@ -417,7 +600,7 @@
                                         Media, PA</div>
                                 </div>
                                 <div class="footer-flex">
-                                    <a href="property-detail.html" class="prt-view">Invest</a>
+                                    <a href="{{ route('user.register') }}" class="prt-view">Invest</a>
                                 </div>
                             </div>
 
@@ -480,7 +663,7 @@
                                         New Kensington, PA</div>
                                 </div>
                                 <div class="footer-flex">
-                                    <a href="property-detail.html" class="prt-view">Invest</a>
+                                    <a href="{{ route('user.register') }}" class="prt-view">Invest</a>
                                 </div>
                             </div>
 
@@ -507,7 +690,8 @@
             <div class="container">
 
                 <div class="row justify-content-center">
-                    <div class="col-lg-7 col-md-10 text-center"  style="background-color: #ccffcc; margin-top: 50px; margin-bottom: 50px">
+                    <div class="col-lg-7 col-md-10 text-center"
+                        style="background-color: #ccffcc; margin-top: 50px; margin-bottom: 50px">
                         <div style="margin-top: 30px" class="sec-heading">
                             <h2>Find By Locations</h2>
                             <p style="margin-top: 30px">We deal on any property used exclusively for business purposes,
@@ -523,8 +707,8 @@
                     <div class="col-lg-4 col-md-4">
                         <div class="location-property-wrap">
                             <div class="location-property-thumb">
-                                <span><img src="{{ asset('assets/newFile1/img/c-1.png') }}"
-                                        class="img-fluid" alt="" /></span>
+                                <span><img src="{{ asset('assets/newFile1/img/c-1.png') }}" class="img-fluid"
+                                        alt="" /></span>
                             </div>
                             <div class="location-property-content">
                                 <div class="lp-content-flex">
@@ -541,8 +725,8 @@
                     <div class="col-lg-4 col-md-4">
                         <div class="location-property-wrap">
                             <div class="location-property-thumb">
-                                <span><img src="{{ asset('assets/newFile1/img/c-2.png') }}"
-                                        class="img-fluid" alt="" /></span>
+                                <span><img src="{{ asset('assets/newFile1/img/c-2.png') }}" class="img-fluid"
+                                        alt="" /></span>
                             </div>
                             <div class="location-property-content">
                                 <div class="lp-content-flex">
@@ -559,8 +743,8 @@
                     <div class="col-lg-4 col-md-4">
                         <div class="location-property-wrap">
                             <div class="location-property-thumb">
-                                <span><img src="{{ asset('assets/newFile1/img/c-3.png') }}"
-                                        class="img-fluid" alt="" /></span>
+                                <span><img src="{{ asset('assets/newFile1/img/c-3.png') }}" class="img-fluid"
+                                        alt="" /></span>
                             </div>
                             <div class="location-property-content">
                                 <div class="lp-content-flex">
@@ -577,8 +761,8 @@
                     <div class="col-lg-4 col-md-4">
                         <div class="location-property-wrap">
                             <div class="location-property-thumb">
-                                <span><img src="{{ asset('assets/newFile1/img/c-4.png') }}"
-                                        class="img-fluid" alt="" /></span>
+                                <span><img src="{{ asset('assets/newFile1/img/c-4.png') }}" class="img-fluid"
+                                        alt="" /></span>
                             </div>
                             <div class="location-property-content">
                                 <div class="lp-content-flex">
@@ -595,8 +779,8 @@
                     <div class="col-lg-4 col-md-4">
                         <div class="location-property-wrap">
                             <div class="location-property-thumb">
-                                <span><img src="{{ asset('assets/newFile1/img/c-5.png') }}"
-                                        class="img-fluid" alt="" /></span>
+                                <span><img src="{{ asset('assets/newFile1/img/c-5.png') }}" class="img-fluid"
+                                        alt="" /></span>
                             </div>
                             <div class="location-property-content">
                                 <div class="lp-content-flex">
@@ -613,8 +797,8 @@
                     <div class="col-lg-4 col-md-4">
                         <div class="location-property-wrap">
                             <div class="location-property-thumb">
-                                <span><img src="{{ asset('assets/newFile1/img/c-6.png') }}"
-                                        class="img-fluid" alt="" /></span>
+                                <span><img src="{{ asset('assets/newFile1/img/c-6.png') }}" class="img-fluid"
+                                        alt="" /></span>
                             </div>
                             <div class="location-property-content">
                                 <div class="lp-content-flex">
@@ -643,7 +827,8 @@
             <div class="container">
 
                 <div class="row justify-content-center">
-                    <div class="col-lg-7 col-md-10 text-center"  style="background-color: #ccffcc; margin-top: 50px; margin-bottom: 50px">
+                    <div class="col-lg-7 col-md-10 text-center"
+                        style="background-color: #ccffcc; margin-top: 50px; margin-bottom: 50px">
                         <div style="margin-top: 30px" class="sec-heading">
                             <h2>Featured Property For Sale</h2>
                             <p style="margin-top: 30px">Investors and analysts keep a close eye on housing starts
@@ -962,7 +1147,8 @@
             <div class="container">
 
                 <div class="row justify-content-center" style="margin-bottom: 30px">
-                    <div class="col-lg-7 col-md-10 text-center"  style="background-color: #ccffcc; margin-top: 50px; margin-bottom: 50px">
+                    <div class="col-lg-7 col-md-10 text-center"
+                        style="background-color: #ccffcc; margin-top: 50px; margin-bottom: 50px">
                         <div style="margin-top: 30px" class="sec-heading ">
                             <h2>Good Reviews by Customers</h2>
                             <p style="margin-top: 30px">Ultimately, while we always hope our clients will be completely

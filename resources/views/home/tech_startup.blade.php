@@ -56,6 +56,8 @@
             padding: 6% 0%;
         }
     </style>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
 </head>
 
 <body>
@@ -66,7 +68,7 @@
     <!--====== OFFCANVAS MENU PART ENDS ======-->
 
     <!--====== HEADER PART START ======-->
-    @include('includes.home_header')
+    @include('includes.home_head')
 
     <!--====== HEADER PART ENDS ======-->
 
@@ -692,6 +694,7 @@
 
     <!--====== Slick js ======-->
     <script src="{{ asset('assets/newfile3/js/slick.min.js') }}"></script>
+    <script src="{{ asset('assets/newfile2/js/jquery.slicknav.min.js') }}"></script>
 
     <!--====== odometer js ======-->
     <script src="{{ asset('assets/newfile3/js/jquery.counterup.min.js') }}"></script>
